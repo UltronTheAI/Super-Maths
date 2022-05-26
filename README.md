@@ -1,10 +1,14 @@
 # Super-Maths
 
     Increase calculation speed with ` SUPER-MATHS `
-    
-    <a href="https://ultrontheai.github.io/Super-Maths/">WEB</a><br><br>
-    
-    <a href="https://ultrontheai.github.io/Super-Maths/supermaths.apk">APK</a>
+
+# WEB
+
+    https://ultrontheai.github.io/Super-Maths/
+
+# APK
+
+    https://ultrontheai.github.io/Super-Maths/supermaths.apk
 
 <img src="Demo.png">
 
