@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="./js/tailwindcss.js"></script>
+    <link rel="icon" href="./images/app.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="height: 100vh;">
+    <div class="home min-h-screen bg-gray-200 flex justify-center items-center w-full">
+        <!-- Start of component -->
+        <div class="box">
+            <div class="box">
+                <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+                    <div id="header" class="flex items-center mb-4">
+                        <img alt="avatar" class="w-20 border-gray-300" src="./images/app.png" />
+                        <div id="header-text" class="leading-5 ml-6 sm">
+                            <h4 id="name" class="text-xl font-semibold">Easy</h4>
+                            <h5 id="job" class="font-semibold text-blue-600">Level 1 - Maths</h5>
+                        </div>
+                    </div>
+                    <div id="quote">
+                        <p class="italic text-gray-600">36 Questions of your choice<br><br>10 minutes ( time limit )</p>
+                    </div>
+                    <button class="w-20 rounded m-2 font-bold text-white bg-teal-400 p-2 active:bg-teal-600"
+                        onclick="game(1)">Play</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+                    <div id="header" class="flex items-center mb-4">
+                        <img alt="avatar" class="w-20 border-gray-300" src="./images/app.png" />
+                        <div id="header-text" class="leading-5 ml-6 sm">
+                            <h4 id="name" class="text-xl font-semibold">Intermediate</h4>
+                            <h5 id="job" class="font-semibold text-blue-600">Level 2 - Maths</h5>
+                        </div>
+                    </div>
+                    <div id="quote">
+                        <p class="italic text-gray-600">50 Questions of your choice<br><br>20 minutes ( time limit )</p>
+                    </div>
+                    <button class="w-20 rounded m-2 font-bold text-white bg-teal-400 p-2 active:bg-teal-600"
+                        onclick="game(2)">Play</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+                    <div id="header" class="flex items-center mb-4">
+                        <img alt="avatar" class="w-20 border-gray-300" src="./images/app.png" />
+                        <div id="header-text" class="leading-5 ml-6 sm">
+                            <h4 id="name" class="text-xl font-semibold">Difficult</h4>
+                            <h5 id="job" class="font-semibold text-blue-600">Level 3 - Maths</h5>
+                        </div>
+                    </div>
+                    <div id="quote">
+                        <p class="italic text-gray-600">79 Questions of your choice<br><br>30 minutes ( time limit )</p>
+                    </div>
+                    <button class="w-20 rounded m-2 font-bold text-white bg-teal-400 p-2 active:bg-teal-600"
+                        onclick="game(3)">Play</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+                    <div id="header" class="flex items-center mb-4">
+                        <img alt="avatar" class="w-20 border-gray-300" src="./images/app.png" />
+                        <div id="header-text" class="leading-5 ml-6 sm">
+                            <h4 id="name" class="text-xl font-semibold">Expert</h4>
+                            <h5 id="job" class="font-semibold text-blue-600">Level 4 - Maths</h5>
+                        </div>
+                    </div>
+                    <div id="quote">
+                        <p class="italic text-gray-600">100 Questions of your choice<br><br>30 minutes ( time limit )
+                        </p>
+                    </div>
+                    <button class="w-20 rounded m-2 font-bold text-white bg-teal-400 p-2 active:bg-teal-600"
+                        onclick="game(4)">Play</button>
+                </div>
+            </div>
+        </div>
+        <!-- End of component -->
+    </div>
+    <div class="choose absolute w-full h-full p-6">
+        <div class="w-full h-full">
+            <div class="h-1/6 w-full flex items-center justify-center font-bold text-teal-400 text-lg">Choose Types OF
+                Questions<span class="mode p-2 m-2 text-cyan-500">Hard</span><button
+                    class="p-2 m-2 bg-teal-400 rounded w-20 text-white font-bold shadow-2xl active:bg-teal-600"
+                    onclick="choose.style.display = 'none';">Back</button><button
+                    class="p-2 m-2 bg-teal-400 rounded w-20 text-white font-bold shadow-2xl active:bg-teal-600"
+                    onclick="start()">Play</button></div>
+            <div class="w-full flex items-center justify-center pt-5">
+                <button class="a w-40 h-20 bg-teal-400 rounded shadow-2xl font-bold text-white" style="font-size: 4ex;"
+                    onclick="code(0, this.className)">Add...</button>
+            </div>
+            <div class="w-full flex items-center justify-center pt-5">
+                <button class="b w-40 h-20 bg-teal-400 rounded shadow-2xl font-bold text-white" style="font-size: 4ex;"
+                    onclick="code(1, this.className)">Sub...</button>
+            </div>
+            <div class="w-full flex items-center justify-center pt-5">
+                <button class="c w-40 h-20 bg-teal-400 rounded shadow-2xl font-bold text-white" style="font-size: 4ex;"
+                    onclick="code(2, this.className)">Multi...</button>
+            </div>
+            <div class="w-full flex items-center justify-center pt-5">
+                <button class="d w-40 h-20 bg-teal-400 rounded shadow-2xl font-bold text-white" style="font-size: 4ex;"
+                    onclick="code(3, this.className)">Div...</button>
+            </div>
+        </div>
+        <div id="toast-warning"
+            class="absolute flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+            role="alert">
+            <div
+                class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg dark:bg-orange-700 dark:text-orange-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <div class="text ml-3 text-sm font-normal">Improve password difficulty.</div>
+            <button type="button" onclick="toast_warning.style.display = 'none'"
+                class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+                data-dismiss-target="#toast-warning" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="game absolute w-full h-full bg-white" style="top: 0; height: 200%;">
+        <div class="menu w-full flex h-auto">
+            <div class="exit p-2 m-4 bg-teal-400 w-20 h-10 rounded shadow-2xl flex items-center justify-center font-bold text-white text-lg active:bg-teal-600"
+                onclick="location.reload()">
+                Exit</div>
+                <div class="exit p-6 m-4 bg-teal-400 w-auto h-10 rounded shadow-2xl flex items-center justify-center font-bold text-white text-lg active:bg-teal-600"
+                onclick="score.style.display = 'flex';                         document.querySelector('.questionsb2').innerHTML = String(parseInt((wr/gjson[get][3]) * 100)) + '%';                ">
+                Submit Paper</div>
+            <div class="time p-2 m-4 font-bold text-gray-600 text-lg">Time Remaining <span
+                    class="time_text p-4 text-gray-400">0:0:0 (H, M, S)</span></div>
+            <div class="paper p-2 m-2 font-bold text-teal-500" style="font-size: 160%;">Maths - <span
+                    class="papername text-red-300">Hard</span> </div>
+        </div>
+        <div class="down w-full h-full p-10">
+            <div class="w-full flex">
+                <div class="p-2 m-4 text-lg font-bold text-slate-500">Your Answers</div>
+                <div
+                    class="questionsa p-2 m-4 w-10 h-10 rounded shadow-2xl font-bold text-white bg-teal-400 flex items-center justify-center">
+                    0</div>
+                <div
+                    class="questionsb p-2 m-4 w-10 h-10 rounded shadow-2xl font-bold text-white bg-red-400 flex items-center justify-center">
+                    0</div>
+            </div>
+            <div class="up flex w-full">
+                <div
+                    class="questionsc p-2 m-4 w-20 h-10 rounded shadow-2xl font-bold text-white bg-teal-400 flex items-center justify-center">
+                    Qn. 1</div>
+                <div class="questions6 p-2 m-4 w-2/3 h-auto rounded shadow-2xl font-bold text-white bg-teal-400 flex">
+                    Add 573 in 673
+                </div>
+            </div>
+            <div class="down flex">
+                <input type="number" id="answer"
+                    class="p-2 m-4 w-30 h-10 rounded shadow-2xl font-bold text-white bg-teal-400 flex items-center justify-center border-0 outline-0 placeholder:text-white placeholder:text-lg p-4 w-1/3"
+                    placeholder="Answer" style="width: 60%;">
+                <div
+                    onclick="check_(document.getElementById('answer').value)" class="questions p-2 m-4 w-30 h-10 rounded shadow-2xl font-bold text-lg text-white bg-teal-400 flex items-center justify-center active:bg-teal-600 p-4 w-1/3">
+                    Submit</div>
+            </div>
+        </div>
+    </div>
+    <div class="score absolute w-full h-full flex bg-white items-center justify-center" style="top: 0;">
+        <div class="p-2 m-4 text-lg font-bold text-slate-500">Your Score</div>
+                <div
+                    class="questionsb2 p-2 m-4 w-auto h-10 rounded shadow-2xl font-bold text-white bg-teal-400 flex items-center justify-center w-auto p-8">
+                    0</div>
+                    <div class="exit p-2 m-4 bg-teal-400 w-20 h-10 rounded shadow-2xl flex items-center justify-center font-bold text-white text-lg active:bg-teal-600"
+                    onclick="location.reload()">
+                    Exit</div>
+    </div>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+               
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .choose {
+            background: rgba(255, 255, 255, 0.836);
+            top: 0;
+            height: 200%;
+            width: 100%;
+        }
+
+        .game {
+            width: 100%;
+        }
+
+        #toast-warning {
+            animation-name: animation;
+            animation-duration: 0.3s;
+        }
+
+        @keyframes animation {
+            0% {
+                left: -100%;
+            }
+
+            90% {
+                left: 0%;
+            }
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+    <script>
+        var active = [0, 0, 0, 0]
+        var startn = 0;
+        var pa = 0;
+        var sh = 0;
+        var sm = 0;
+        var ss = 0;
+        var qun = 0;
+        var wr = 0
+        var rq = 0
+        var setup_ = []
+        var gm = [undefined, 'Easy', 'Intermediate', 'Difficult', 'Expert']
+        var get = ''
+        var gjson = { "Easy": [10, 10, 100, 36], "Intermediate": [20, 100, 1000, 50], "Difficult": [30, 1000, 10000, 79], "Expert": [30, 100000, 1000000, 100] }
+        var home = document.querySelector('.home');
+        var mode = document.querySelector('.mode');
+        var choose = document.querySelector('.choose')
+        var toast_warning = document.getElementById('toast-warning');
+        var game3 = document.querySelector('.game')
+        var time_text = document.querySelector('.time_text');
+        toast_warning.style.display = 'none'
+        var score = document.querySelector('.score')
+        var tlist = ['', '+', '-', '*', '/']
+
+        function redmessage(text) {
+            toast_warning.style.display = 'flex'
+            document.querySelector('#toast-warning .text').innerHTML = String(text);
+            setTimeout(function () {
+                toast_warning.style.display = 'none'
+            }, 6000)
+        }
+
+        choose.style.display = 'none';
+        game3.style.display = 'none';
+        score.style.display = 'none';
+        // game3.style.display = 'block';
+        // choose.style.display = 'flex';
+
+        function game(id) {
+            choose.style.display = 'flex';
+            mode.innerHTML = gm[id]
+            get = gm[id]
+            window.scrollTo(0, -1000);
+        }
+        function code(n, id) {
+            id = id.split(' ')[0];
+            if (active[n] != 1) {
+                active[n] = 1
+                document.querySelector('.' + id).style.background = 'rgb(13 148 136)';
+            } else {
+                active[n] = 0
+                document.querySelector('.' + id).style.background = 'rgb(45 212 191)';
+            }
+        }
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+        }
+
+        function genq() {
+            qun += 1;
+            document.querySelector('.questionsc').innerHTML = String(qun);
+            var s = gjson[get][1]
+            var e = gjson[get][2]
+
+            if (setup_.length != 1) {
+                var n_ = getRandomInt(1, setup_.length + 1)
+                // console.log(n_)
+                n_ = tlist[n_]
+                var fn = getRandomInt(s, e)
+                var fs = getRandomInt(s, e)
+                pa = eval(String(fn) + n_ + String(fs))
+                var ws = ''
+                if (n_ == '+') {
+                    ws = 'Add ' + String(fn) + ' in ' + String(fs)
+                }
+                if (n_ == '-') {
+                    ws = 'Subtract ' + String(fs) + ' from ' + String(fn)
+                }
+                if (n_ == '*') {
+                    ws = 'Multiply ' + String(fn) + ' and ' + String(fs)
+                }
+                if (n_ == '/') {
+                    ws = 'Divide ' + String(fn) + ' / ' + String(fs)
+                }
+                document.querySelector('.questions6').innerHTML = ws;
+            } else {
+                var n_ = setup_[0]
+                // console.log(n_)
+                n_ = tlist[n_]
+                var fn = getRandomInt(s, e)
+                var fs = getRandomInt(s, e)
+                pa = eval(String(fn) + n_ + String(fs))
+                var ws = ''
+                if (n_ == '+') {
+                    ws = 'Add ' + String(fn) + ' in ' + String(fs)
+                }
+                if (n_ == '-') {
+                    ws = 'Subtract ' + String(fs) + ' from ' + String(fn)
+                }
+                if (n_ == '*') {
+                    ws = 'Multiply ' + String(fn) + ' and ' + String(fs)
+                }
+                if (n_ == '/') {
+                    ws = 'Divide ' + String(fn) + ' and ' + String(fs)
+                }
+                document.querySelector('.questions6').innerHTML = ws;
+            }
+
+        }
+        function start() {
+            if (active.filter(x => x == 0).length != 4) {
+                choose.style.display = 'none';
+                game3.style.display = 'block';
+                document.querySelector('.papername').innerHTML = get
+                for (var i = 0; i < active.length; i++) {
+                    if (active[i] != 0) {
+                        setup_.push(i + 1)
+                        
+                    }
+                }
+        genq()
+        startn = 1
+        sm = gjson[get][0] - 1
+
+
+            } else {
+                redmessage('At List Choose One')
+            }
+        }
+        function check_(text) {
+            text = parseInt(text)
+            if (pa == text) {
+                wr += 1
+                document.querySelector('.questionsa').innerHTML = String(wr)
+            } else {
+                rq += 1
+                document.querySelector('.questionsb').innerHTML = String(rq)
+            }
+            document.getElementById('answer').value = ''
+            genq()
+        }
+        ss = 60
+        setInterval(() => {
+            if (startn == 1) {
+                // var date = new Date();
+                // var th = date.getHours() - sh
+                // var tm = date.getMinutes() - sm
+                // var ts = ss
+                // console.log(date)
+                ss -= 1;
+                if (qun >= gjson[get][3] + 1) {
+                    score.style.display = 'flex';
+                    document.querySelector('.questionsb2').innerHTML = String(parseInt((wr/gjson[get][3]) * 100)) + '%';
+                } else {}
+                if (ss == 0) {
+                    ss = 60
+                    sm -= 1;
+                } else {}
+                if (sm == 0 & ss == 1) {
+                    score.style.display = 'flex';
+                        document.querySelector('.questionsb2').innerHTML = String(parseInt((wr/gjson[get][3]) * 100)) + '%';
+                }
+                time_text.innerHTML = String(0) + ': ' + String(sm) + ': ' + String(ss) + ' (H, M, S)';
+                // console.log(sm, ss)
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
